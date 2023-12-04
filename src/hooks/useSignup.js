@@ -6,6 +6,7 @@ export const useSignup = () => {
   const [error, setError] = useState();
   const [isPending, setIsPending] = useState(false);
   const { dispatch } = useAuthContext();
+  const [isCancelled, setIsCancelled] = useState(false);
 
   const signup = async (email, password, displayName) => {
     setError(null);
@@ -26,15 +27,26 @@ export const useSignup = () => {
 
       // 유저 정보를 state에 저장한다.
       dispatch({ type: "LOGIN", payload: res.user });
-
-      setError(null);
-      setIsPending(false);
+      //작업이 취소되었다면 스테이트 업데이트를 하지 않는다.
+      if (!isCancelled) {
+        setError(null);
+        setIsPending(false);
+      }
     } catch (err) {
-      console.log(err.message);
-      setError(err.message);
-      setIsPending(false);
+      if (!isCancelled) {
+        console.log(err.message);
+        setError(err.message);
+        setIsPending(false);
+      }
     }
   };
+
+  useEffect(() => {
+    setIsCancelled(false);
+    // 로그아웃 작업중 중간에 사라진다면
+    // useEffect의 return이 unmount될때의 작업(클린업)이 된다.
+    return () => setIsCancelled(true);
+  }, []);
 
   return { signup, error, isPending };
 };
