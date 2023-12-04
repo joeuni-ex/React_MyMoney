@@ -17,7 +17,6 @@ export const useSignup = () => {
         email,
         password
       );
-      console.log(res.user); //가입 후 유저 정보 출력
 
       if (!res) {
         throw new Error("가입중 오류가 발생했습니다.");
