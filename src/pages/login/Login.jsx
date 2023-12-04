@@ -1,13 +1,15 @@
 import { useState } from "react";
 import styles from "./Login.module.css";
+import { useLogin } from "../../hooks/useLogin";
 
 const Login = () => {
   const [email, setEmail] = useState(""); //이메일
   const [password, setPassword] = useState(""); //비밀번호
+  const { login, error, isPending } = useLogin(); //useLogin훅 가져오기
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(email, password);
+    login(email, password);
   };
 
   return (
@@ -29,7 +31,13 @@ const Login = () => {
           value={password}
         />
       </label>
-      <button className="btn">로그인</button>
+      {!isPending && <button className="btn">로그인</button>}
+      {isPending && (
+        <button className="btn " disabled>
+          로딩중...
+        </button>
+      )}
+      {error && <p>{error}</p>}
     </form>
   );
 };
