@@ -1,10 +1,16 @@
-import { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <div className="App">앱입니다</div>
+      <div className="App">
+        <BrowserRouter>
+          <Routes>
+            <Route />
+          </Routes>
+        </BrowserRouter>
+      </div>
     </>
   );
 }
