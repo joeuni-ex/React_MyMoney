@@ -137,6 +137,8 @@
   }
 
   .contentTitle {
+    border-top: solid 3px #ec8f5e;
+    padding-top: 20px;
     font-size: 1.3rem;
     font-weight: 800;
     color: #ec8f5e;
