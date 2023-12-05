@@ -6,6 +6,7 @@ import styles from "./Home.module.css";
 import TransactionList from "./TransactionList";
 import { useEffect } from "react";
 import Footer from "./Footer";
+import ModalAlert from "./ModalAlert";
 
 const Home = () => {
   const { user } = useAuthContext();
@@ -18,6 +19,16 @@ const Home = () => {
     order2
   );
 
+  //모달창
+  const [openAlert, setOpenAlert] = useState(false);
+
+  const [item, setItem] = useState("");
+
+  const onModalAlert = () => {
+    setOpenAlert(!openAlert);
+  };
+
+  //정렬
   useEffect(() => {}, [order]);
   useEffect(() => {}, [order2]);
 
@@ -61,7 +72,19 @@ const Home = () => {
               </select>
             </div>
             {error && <p>{error}</p>}
-            {documents && <TransactionList transactions={documents} />}
+            <div>
+              {documents && (
+                <TransactionList
+                  transactions={documents}
+                  setItem={setItem}
+                  onModalAlert={onModalAlert}
+                />
+              )}
+              {/* 모달창 */}
+              {openAlert && (
+                <ModalAlert onModalAlert={onModalAlert} item={item} />
+              )}
+            </div>
           </div>
         </div>
         <Footer />
