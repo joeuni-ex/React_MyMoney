@@ -78,6 +78,7 @@ const Home = () => {
                   transactions={documents}
                   setItem={setItem}
                   onModalAlert={onModalAlert}
+                  openAlert={openAlert}
                 />
               )}
               {/* 모달창 */}

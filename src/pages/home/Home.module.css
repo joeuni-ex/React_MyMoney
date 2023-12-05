@@ -65,6 +65,7 @@
   width: 100%;
 }
 .sidebar h3 {
+  font-weight: 800;
   color: #ec8f5e;
   margin-bottom: 20px;
   font-size: 1.5rem;
