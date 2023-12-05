@@ -7,7 +7,9 @@
 
 ### 회원가입 화면
 
-![Alt text](image.png)
+- email 형식에 맞게 작성하지 않으면 오류 발생하며
+- password는 firebase의 자체적인 유효성 검사로 인하여 6자 이상 작성해야한다.
+  ![Alt text](image.png)
 
 ### 로그인 화면
 
