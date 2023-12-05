@@ -20,6 +20,6 @@ const firedb = firebase.firestore();
 //인증서비스
 const fireauth = firebase.auth();
 //timestamp 시간
-const timestamp = firebase.firestore.timestamp;
+const timestamp = firebase.firestore.Timestamp;
 
 export { firedb, fireauth, timestamp };
