@@ -21,6 +21,8 @@ const firestoreReducer = (state, action) => {
         success: true,
         errror: null,
       };
+    case "DELETE_DOCUMENT":
+      return { isPending: false, document: null, success: true, errror: null };
     case "ERROR":
       return {
         isPending: false,
@@ -68,5 +70,22 @@ export const useFirestore = (collection) => {
     return () => setIsCancelled(true);
   }, []);
 
-  return { addDocument, response };
+  // doc 삭제
+  const deleteDocument = async (id) => {
+    dispatch({ type: "IS_PENDING" });
+
+    try {
+      await ref.doc(id).delete();
+      dispatchIfNotCancelled({ type: "DELETE_DOCUMENT" });
+    } catch (err) {
+      dispatchIfNotCancelled({ type: "ERROR", payload: "삭제할 수 없습니다." });
+    }
+  };
+
+  useEffect(() => {
+    setIsCancelled(false);
+    return () => setIsCancelled(true);
+  }, []);
+
+  return { addDocument, deleteDocument, response };
 };
