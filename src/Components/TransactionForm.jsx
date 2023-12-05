@@ -1,17 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useFirestore } from "../hooks/useFireStore";
 
-const TransactionForm = () => {
+const TransactionForm = ({ uid }) => {
   const [name, setName] = useState("");
   const [amount, setAmount] = useState("");
+  const { addDocument, response } = useFirestore("transactions"); //파이어스토어에 새로 문서추가 가져오기
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log({
+
+    addDocument({
+      uid,
       name,
       amount,
     });
   };
 
+  //db에 새문서 저장후 폼 내용 없애기
+  useEffect(() => {
+    if (response.success) {
+      setName("");
+      setAmount("");
+    }
+  }, [response.success]);
   return (
     <div>
       <h3>거래 추가</h3>
