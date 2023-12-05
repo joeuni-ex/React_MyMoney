@@ -4,6 +4,7 @@ import { useFirestore } from "../hooks/useFireStore";
 const TransactionForm = ({ uid }) => {
   const [name, setName] = useState("");
   const [amount, setAmount] = useState("");
+  const [memo, setMemo] = useState("");
   const { addDocument, response } = useFirestore("transactions"); //파이어스토어에 새로 문서추가 가져오기
 
   const handleSubmit = (e) => {
@@ -13,6 +14,7 @@ const TransactionForm = ({ uid }) => {
       uid,
       name,
       amount,
+      memo,
     });
   };
 
@@ -21,6 +23,7 @@ const TransactionForm = ({ uid }) => {
     if (response.success) {
       setName("");
       setAmount("");
+      setMemo("");
     }
   }, [response.success]);
   return (
@@ -45,6 +48,18 @@ const TransactionForm = ({ uid }) => {
             value={amount}
           />
         </label>
+        <label>
+          <span>메모:</span>
+          <textarea
+            style={{ color: "black" }}
+            onChange={(e) => setMemo(e.target.value)}
+            value={memo}
+            required
+            cols="35"
+            rows="4"
+          ></textarea>
+        </label>
+
         <button>추가</button>
       </form>
     </div>
