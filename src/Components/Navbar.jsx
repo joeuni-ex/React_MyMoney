@@ -27,7 +27,7 @@ const Navbar = () => {
         )}
         {user && (
           <>
-            <li>안녕하세요, {user.displayName}</li>
+            <li className={styles.navUser}>안녕하세요, {user.displayName}님</li>
             <li>
               <button className="btn" onClick={logout}>
                 로그아웃

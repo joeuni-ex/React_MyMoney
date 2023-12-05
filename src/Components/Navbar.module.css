@@ -25,3 +25,9 @@
   color: #333;
   text-decoration: none;
 }
+
+@media only screen and (max-width: 600px) {
+  .navUser {
+    font-size: 15px;
+  }
+}
