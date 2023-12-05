@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { firedb } from "../firebase/config";
 
-export const useCollection = (collection, query) => {
+export const useCollection = (collection, query, order, order2) => {
   const [documents, setDocuments] = useState(null);
   const [error, setError] = useState(null);
 
@@ -12,6 +12,8 @@ export const useCollection = (collection, query) => {
     if (query) {
       ref = ref.where(...query); //...으로 배열을 각각의 값으로 변환 [1,2,3] => (1,2,3)
     }
+    ref = ref.orderBy(order, order2);
+    // ref = ref.orderBy("amount");
 
     const unsub = ref.onSnapshot(
       (snapshot) => {
@@ -30,7 +32,7 @@ export const useCollection = (collection, query) => {
     );
 
     return () => unsub();
-  }, [collection]);
+  }, [collection, order, order2]);
 
   return { documents, error };
 };
