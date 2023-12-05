@@ -22,12 +22,12 @@ const Home = () => {
   useEffect(() => {}, [order2]);
 
   const handleSortChange = (e) => {
-    console.log(e.target.value);
+    //console.log(e.target.value);
     setOrder(e.target.value);
   };
 
   const handleSortChange2 = (e) => {
-    console.log(e.target.value);
+    //console.log(e.target.value);
     setOrder2(e.target.value);
   };
 
