@@ -1,6 +1,6 @@
 .homeContainer {
   height: 100%;
-  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -149,6 +149,12 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .homeContainer {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .container {
     display: grid;
     grid-template-columns: 1fr;
@@ -158,7 +164,7 @@
   }
   .content {
     padding-left: 0;
-    width: 90%;
+    width: 100%;
   }
 
   .contentTitle {
@@ -183,7 +189,7 @@
     padding-left: 0px;
   }
   .sidebar div {
-    width: 90%;
+    width: 100%;
   }
   .sidebar form {
     width: 100%;
