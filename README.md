@@ -42,7 +42,7 @@
 
 #### 정렬 기능
 
-![image](https://github.com/joeuni-ex/React_MyMoney/assets/141595215/7b7275a9-0114-4db5-8088-c192886566ee)
+-![image](https://github.com/joeuni-ex/React_MyMoney/assets/141595215/7b7275a9-0114-4db5-8088-c192886566ee)
 
 - 원하는 정렬 기준으로 거래내역을 확인 할 수 있다.
 
