@@ -9,7 +9,7 @@
 
 - email 형식에 맞게 작성하지 않으면 오류 발생하며
 - password는 firebase의 자체적인 유효성 검사로 인하여 6자 이상 작성해야한다.
-  ![image](https://github.com/joeuni-ex/React_MyMoney/assets/141595215/39dbab9b-b7be-470d-8740-009debc24cf1)
+- ![image](https://github.com/joeuni-ex/React_MyMoney/assets/141595215/39dbab9b-b7be-470d-8740-009debc24cf1)
 
 
 ### 로그인 화면
@@ -27,7 +27,7 @@
 ### 거래 추가 기능
 
 - 소비한 내용과 가격 그리고 추가적인 메모를 기재하여 DB에 저장가능
- ![image](https://github.com/joeuni-ex/React_MyMoney/assets/141595215/63977492-8dbe-4778-9198-efb90366286c)
+- ![image](https://github.com/joeuni-ex/React_MyMoney/assets/141595215/63977492-8dbe-4778-9198-efb90366286c)
 
 
 ### 거래내역
@@ -63,4 +63,4 @@
 
 ### 배포주소
 
-- https://react-my-money-app-joeuni.netlify.app/
+-https://react-my-money-app-joeuni.netlify.app
