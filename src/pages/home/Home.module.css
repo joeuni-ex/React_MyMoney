@@ -158,7 +158,7 @@
   }
   .content {
     padding-left: 0;
-    width: 100%;
+    width: 80%;
   }
 
   .contentTitle {
@@ -181,6 +181,9 @@
   }
   .sidebar {
     padding-left: 0px;
+  }
+  .sidebar div {
+    width: 80%;
   }
   .sidebar form {
     width: 100%;
