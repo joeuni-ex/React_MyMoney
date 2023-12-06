@@ -152,13 +152,13 @@
   .container {
     display: grid;
     grid-template-columns: 1fr;
-    width: 80%;
+    width: 90%;
     max-width: 960px;
-    margin: 60px auto;
+    margin: 10px 0px;
   }
   .content {
     padding-left: 0;
-    width: 80%;
+    width: 90%;
   }
 
   .contentTitle {
@@ -183,7 +183,7 @@
     padding-left: 0px;
   }
   .sidebar div {
-    width: 80%;
+    width: 90%;
   }
   .sidebar form {
     width: 100%;
