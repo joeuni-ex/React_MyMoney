@@ -31,6 +31,9 @@
 .sidebar {
   padding-left: 30px;
 }
+.sidebar div {
+  width: 90%;
+}
 .sidebar form {
   width: 100%;
   padding: 20px;
