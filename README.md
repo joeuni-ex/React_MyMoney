@@ -33,7 +33,7 @@
 ### 거래내역
 
 - 거래가 추가 될 때마다 자동으로 거래내역에 업데이트 된다.
- ![image](https://github.com/joeuni-ex/React_MyMoney/assets/141595215/8662c9ba-3d8b-40bf-9aae-0a53ca9d32e6)
+- ![image](https://github.com/joeuni-ex/React_MyMoney/assets/141595215/8662c9ba-3d8b-40bf-9aae-0a53ca9d32e6)
 
 - 거래내역의 타이틀을 클릭하면 상세보기가 가능하다(메모)
 - ![image](https://github.com/joeuni-ex/React_MyMoney/assets/141595215/602f6240-0b29-4e89-9e66-b58f29bc03f4)
