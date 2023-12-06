@@ -27,7 +27,7 @@
 ### 거래 추가 기능
 
 - 소비한 내용과 가격 그리고 추가적인 메모를 기재하여 DB에 저장가능
- ![image](https://github.com/joeuni-ex/React_MyMoney/assets/141595215/63977492-8dbe-4778-9198-efb90366286c)
+- ![image](https://github.com/joeuni-ex/React_MyMoney/assets/141595215/63977492-8dbe-4778-9198-efb90366286c)
 
 
 ### 거래내역
