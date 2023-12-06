@@ -63,4 +63,4 @@
 
 ### 배포주소
 
-- https://react-my-money-app-joeuni.netlify.app/
+-https://react-my-money-app-joeuni.netlify.app
