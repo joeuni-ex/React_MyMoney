@@ -55,7 +55,7 @@ const TransactionForm = ({ uid }) => {
             onChange={(e) => setMemo(e.target.value)}
             value={memo}
             required
-            cols="35"
+            cols="27"
             rows="4"
           ></textarea>
         </label>

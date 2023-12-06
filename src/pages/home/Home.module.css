@@ -32,10 +32,10 @@
   padding-left: 30px;
 }
 .sidebar div {
-  width: 90%;
+  width: 100%;
 }
 .sidebar form {
-  width: 100%;
+  width: 95%;
   padding: 20px;
   background: #f3b664;
   border-radius: 10px;
@@ -58,6 +58,10 @@
   display: block;
   color: #fff;
 }
+.sidebar textarea {
+  max-width: 100%;
+}
+
 .sidebar button {
   color: #fff;
   border: 2px solid #fff;
@@ -177,5 +181,8 @@
   }
   .sidebar form {
     margin-bottom: 40px;
+  }
+  .sidebar textarea {
+    min-width: 100%;
   }
 }
