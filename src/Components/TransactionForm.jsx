@@ -27,7 +27,7 @@ const TransactionForm = ({ uid }) => {
     }
   }, [response.success]);
   return (
-    <div>
+    <>
       <h3>거래 추가</h3>
       <form onSubmit={handleSubmit}>
         <label>
@@ -62,7 +62,7 @@ const TransactionForm = ({ uid }) => {
 
         <button>추가</button>
       </form>
-    </div>
+    </>
   );
 };
 
