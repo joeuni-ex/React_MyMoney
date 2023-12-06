@@ -157,10 +157,10 @@
     align-items: center;
   }
   .container {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     width: 90%;
-    max-width: 960px;
     margin: 10px 0px;
   }
   .content {
@@ -193,7 +193,7 @@
   }
   .sidebar form {
     margin: 0px;
-    width: 90%;
+    width: 100%;
     margin-bottom: 40px;
   }
 
