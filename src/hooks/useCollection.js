@@ -32,7 +32,7 @@ export const useCollection = (collection, query, order, order2) => {
     );
 
     return () => unsub();
-  }, [collection, order, order2]);
+  }, [order, order2]);
 
   return { documents, error };
 };
