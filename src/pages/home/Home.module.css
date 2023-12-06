@@ -160,20 +160,30 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    width: 90%;
+    width: 100%;
     margin: 10px 0px;
   }
   .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-left: 0;
     width: 100%;
+    padding: 20px;
   }
 
   .contentTitle {
+    text-align: center;
+    width: 100%;
     border-top: solid 3px #ec8f5e;
     padding-top: 20px;
+    margin-bottom: 30px;
     font-size: 1.3rem;
     font-weight: 800;
     color: #ec8f5e;
+  }
+  .transactions li {
+    width: 90vw;
   }
   .transactions .name {
     font-size: 1.2em;
@@ -183,17 +193,22 @@
   }
   .sidebar h3 {
     color: #ec8f5e;
+    margin-top: 30px;
     margin-bottom: 20px;
     font-size: 1.3rem;
   }
 
   .sidebar {
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100vw;
     padding: 0px;
   }
   .sidebar form {
     margin: 0px;
-    width: 100%;
+    width: 80%;
     margin-bottom: 40px;
   }
 
