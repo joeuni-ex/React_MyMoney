@@ -156,6 +156,7 @@
   }
   .content {
     padding-left: 0;
+    width: 95%;
   }
 
   .contentTitle {
@@ -184,5 +185,11 @@
   }
   .sidebar textarea {
     min-width: 100%;
+  }
+  .order {
+    height: 45px;
+    width: 30%;
+    font-size: 1rem;
+    margin: 0px 0px 0px 0px;
   }
 }
