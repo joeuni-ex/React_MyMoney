@@ -187,8 +187,9 @@
     font-size: 1.3rem;
   }
 
-  .sidebar div {
+  .sidebar {
     width: 100vw;
+    padding: 0px;
   }
   .sidebar form {
     margin: 0px;
